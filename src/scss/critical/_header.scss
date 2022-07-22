@@ -1,0 +1,20 @@
+//--------------------------------------------------------------
+// Global Site Header
+//--------------------------------------------------------------
+.site-header {
+	@apply bg-tan py-32;
+
+	> .container-full {
+		@apply flex justify-between my-0;
+	}
+
+	.site-description {
+		@apply no-underline;
+	}
+
+	.site-branding {
+		a {
+			@apply no-underline;
+		}
+	}
+}

@@ -1,0 +1,298 @@
+{
+    "key": "group_6279a85e4cdd1",
+    "title": "Block - Icon Links",
+    "fields": [
+        {
+            "key": "field_6279a866c5e9b",
+            "label": "Icons",
+            "name": "icons",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Icon Link",
+            "sub_fields": [
+                {
+                    "key": "field_6279a86dc5e9c",
+                    "label": "Item Link",
+                    "name": "item_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6279a885c5e9d",
+                    "label": "Item Icon",
+                    "name": "item_icon",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_628552c0a6fcb",
+                                "operator": "==",
+                                "value": "show"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"> <path d=\"M12.7519 9.16795L9.5547 7.03647C8.89015 6.59343 8 7.06982 8 7.86852V12.1315C8 12.9302 8.89015 13.4066 9.5547 12.9635L12.7519 10.8321C13.3457 10.4362 13.3457 9.56377 12.7519 9.16795Z\" stroke=\"#E4E4E7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\/> <path d=\"M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z\" stroke=\"#E4E4E7\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\/> <\/svg>",
+                    "placeholder": "< paste svg code here >",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6279bd5c49a81",
+            "label": "Orientation",
+            "name": "orientation",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "row": "Row",
+                "col": "Columns"
+            },
+            "allow_null": 0,
+            "default_value": "row",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6279bf7d4282d",
+            "label": "Align",
+            "name": "align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "items-center": "Center",
+                "items-start": "Start",
+                "items-end": "End"
+            },
+            "allow_null": 0,
+            "default_value": "items-center",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6279be0ebd096",
+            "label": "Gap",
+            "name": "gap",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6279bf5c91e8e",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 40,
+            "min": "",
+            "max": 150,
+            "step": 10,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6279be645b9c6",
+            "label": "Gap Override",
+            "name": "gap_override",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6279bf5c91e8e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "gap-16",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6279bf5c91e8e",
+            "label": "",
+            "name": "override_enable",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Enable Gap Override",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62855261a6fca",
+            "label": "Icons Order",
+            "name": "icons_order",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "icon_first": "Icon First",
+                "text_first": "Text First"
+            },
+            "allow_null": 0,
+            "default_value": "icon_first",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_628552c0a6fcb",
+            "label": "Icons Display",
+            "name": "icons_display",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "allow_null": 0,
+            "default_value": "show",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_628e8a3ce08c2",
+            "label": "Icons Color",
+            "name": "icons_color",
+            "type": "editor_palette",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_628552c0a6fcb",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "exclude_colors": "",
+            "return_format": "slug"
+        },
+        {
+            "key": "field_6286a32e1c514",
+            "label": "Text Display",
+            "name": "text_display",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show_text": "Show Text",
+                "hide_text": "Hide Text"
+            },
+            "allow_null": 0,
+            "default_value": "show_text",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1657558520
+}

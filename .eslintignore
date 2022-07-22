@@ -1,0 +1,9 @@
+build
+node_modules
+vendor
+*.min.js
+!/.*.js
+acf-json/*.json
+/acf-json/
+theme.json
+.stylelintrc.json

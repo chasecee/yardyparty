@@ -1,0 +1,401 @@
+{
+	"key": "group_6257175309867",
+	"title": "Block - Feature Grid",
+	"fields": [
+		{
+			"key": "field_625f01e621503",
+			"label": "Icons",
+			"name": "icons",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"visible": "Visible",
+				"hidden": "Hidden"
+			},
+			"allow_null": 0,
+			"default_value": "visible",
+			"layout": "horizontal",
+			"return_format": "value"
+		},
+		{
+			"key": "field_625f1483a4af8",
+			"label": "Icon Alignment",
+			"name": "icon_alignment",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_625f01e621503",
+						"operator": "==",
+						"value": "visible"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"left": "Left",
+				"top": "Top",
+				"top-center": "Top Center"
+			},
+			"allow_null": 0,
+			"default_value": "left",
+			"layout": "horizontal",
+			"return_format": "value"
+		},
+		{
+			"key": "field_625732b894dd4",
+			"label": "Icon BG Colors",
+			"name": "icon_bg_colors",
+			"type": "editor_palette",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_625f01e621503",
+						"operator": "==",
+						"value": "visible"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "nebula",
+			"exclude_colors": "",
+			"return_format": "slug"
+		},
+		{
+			"key": "field_625f187c4a957",
+			"label": "Boxed BG",
+			"name": "boxed_bg",
+			"type": "editor_palette",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_625f1483a4af8",
+						"operator": "==",
+						"value": "top-center"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "zinc-50",
+			"exclude_colors": "",
+			"return_format": "slug"
+		},
+		{
+			"key": "field_625f022c21505",
+			"label": "Buttons",
+			"name": "buttons",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"visible": "Visible",
+				"hidden": "Hidden"
+			},
+			"allow_null": 0,
+			"default_value": "visible",
+			"layout": "horizontal",
+			"return_format": "value"
+		},
+		{
+			"key": "field_62587f74b5cd6",
+			"label": "Columns",
+			"name": "columns",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4",
+				"5": "5",
+				"6": "6"
+			},
+			"allow_null": 0,
+			"default_value": 2,
+			"layout": "horizontal",
+			"return_format": "value"
+		},
+		{
+			"key": "field_625f034597a9c",
+			"label": "Column Gap",
+			"name": "column_gap",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_625f066c66696",
+						"operator": "!=",
+						"value": "1"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": 20,
+			"min": 0,
+			"max": 100,
+			"step": 10,
+			"prepend": "gap-",
+			"append": ""
+		},
+		{
+			"key": "field_625f038997a9d",
+			"label": "Column Gap Override",
+			"name": "column_gap_override",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_625f066c66696",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "gap-16",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "field_625f066c66696",
+			"label": "",
+			"name": "override_enable",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"message": "Enable Gap Override",
+			"default_value": 0,
+			"ui": 0,
+			"ui_on_text": "",
+			"ui_off_text": ""
+		},
+		{
+			"key": "field_62572054abe38",
+			"label": "Features",
+			"name": "features",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"collapsed": "",
+			"min": 0,
+			"max": 0,
+			"layout": "block",
+			"button_label": "",
+			"sub_fields": [
+				{
+					"key": "field_62572077abe39",
+					"label": "Title",
+					"name": "title",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "Competitive exchange rates",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": ""
+				},
+				{
+					"key": "field_62572086abe3a",
+					"label": "Description",
+					"name": "description",
+					"type": "textarea",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+					"placeholder": "",
+					"maxlength": "",
+					"rows": 6,
+					"new_lines": ""
+				},
+				{
+					"key": "field_625721486af6c",
+					"label": "Button Link",
+					"name": "button_link",
+					"type": "link",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "array"
+				},
+				{
+					"key": "field_625720beabe3b",
+					"label": "Icon",
+					"name": "",
+					"type": "accordion",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"open": 0,
+					"multi_expand": 1,
+					"endpoint": 0
+				},
+				{
+					"key": "field_625720f1abe3d",
+					"label": "SVG Code",
+					"name": "svg_code",
+					"type": "textarea",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M19 10C19 14.9706 14.9706 19 10 19M19 10C19 5.02944 14.9706 1 10 1M19 10H1M10 19C5.02944 19 1 14.9706 1 10M10 19C11.6569 19 13 14.9706 13 10C13 5.02944 11.6569 1 10 1M10 19C8.34315 19 7 14.9706 7 10C7 5.02944 8.34315 1 10 1M1 10C1 5.02944 5.02944 1 10 1\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n</svg>",
+					"placeholder": "",
+					"maxlength": "",
+					"rows": 4,
+					"new_lines": ""
+				},
+				{
+					"key": "field_62572128abe3e",
+					"label": "Image",
+					"name": "image",
+					"type": "image",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "id",
+					"preview_size": "medium",
+					"library": "all",
+					"min_width": "",
+					"min_height": "",
+					"min_size": "",
+					"max_width": "",
+					"max_height": "",
+					"max_size": "",
+					"mime_types": ""
+				},
+				{
+					"key": "field_625720ebabe3c",
+					"label": "Icon (copy)",
+					"name": "",
+					"type": "accordion",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"open": 0,
+					"multi_expand": 0,
+					"endpoint": 1
+				}
+			]
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "==",
+				"value": "acf/feature-grid"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1658003956
+}

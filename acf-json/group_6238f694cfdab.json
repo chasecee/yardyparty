@@ -1,0 +1,116 @@
+{
+    "key": "group_6238f694cfdab",
+    "title": "Block - Section",
+    "fields": [
+        {
+            "key": "field_6257175c345e8",
+            "label": "Patterns",
+            "name": "patterns",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "49",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hide",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62571cf5aa1e7",
+            "label": "Content Width",
+            "name": "content_width",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "49",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "container": "Container",
+                "full-width": "Full Width",
+                "narrow": "Narrow"
+            },
+            "allow_null": 0,
+            "default_value": "container",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6238f69c3ccc8",
+            "label": "Spacing",
+            "name": "spacing",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_6238f5bd76d81"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_62571788345e9",
+            "label": "Background",
+            "name": "background",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_624cbb7c27aa0"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "create_gutenberg_block": 0,
+    "block_name": "",
+    "block_slug": "",
+    "block_category": "text",
+    "block_align": "full",
+    "block_container_class": "block-inner",
+    "inner_blocks": 0,
+    "modified": 1652148684
+}

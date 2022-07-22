@@ -1,0 +1,64 @@
+//----------------------------------------
+// Table - Core Gutenberg Block
+//----------------------------------------
+
+.wp-block-table {
+	@apply container mb-24 p-0 border-0 border-collapse w-full;
+
+	border-spacing: 0;
+
+	@screen xl {
+		@apply border border-solid border-black;
+	}
+
+	thead {
+		@apply hidden;
+
+		@screen xl {
+			@apply table-row-group;
+		}
+	}
+
+	th,
+	td {
+		@apply p-8 text-center;
+
+		@screen xl {
+			@apply table-cell;
+		}
+	}
+
+	td {
+		@apply block text-center border border-solid border-black;
+
+		@screen xl {
+			@apply table-cell;
+		}
+
+		&::before {
+			@apply block uppercase;
+
+			content: attr( data-label );
+
+			@screen xl {
+				@apply hidden;
+			}
+		}
+	}
+
+	th {
+		@apply tracking-widest uppercase border border-solid border-black;
+
+		@screen lg {
+			@apply table-cell;
+		}
+	}
+
+	tr {
+		@apply block mb-16;
+
+		@screen xl {
+			@apply table-row mb-0;
+		}
+	}
+}

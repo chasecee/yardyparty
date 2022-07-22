@@ -1,0 +1,49 @@
+//--------------------------------------------------------------
+// Global Resets/Overrides
+//--------------------------------------------------------------
+*,
+::after,
+::before {
+	@apply box-border break-words;
+
+	word-wrap: break-word;
+}
+
+html {
+	scroll-behavior: smooth;
+	@apply font-sans;
+}
+body {
+	@apply text-black text-20 leading-140;
+}
+pre {
+	@apply overflow-auto;
+}
+a {
+	@apply no-underline hover:text-sky;
+}
+//-----------------------------------------
+// Containers
+//-----------------------------------------
+.container {
+	.container {
+		@apply px-0;
+	}
+}
+.container-full {
+	@apply px-16 md:px-32;
+}
+.container-narrow {
+	@screen md {
+		max-width: 730px;
+	}
+
+	@apply px-16 mx-auto;
+}
+
+//-----------------------------------------
+// Admin Overrides
+//-----------------------------------------
+.block-editor-writing-flow {
+	@apply text-base;
+}

@@ -1,0 +1,172 @@
+{
+    "key": "group_624cbb7c27aa0",
+    "title": "Clone: Background",
+    "fields": [
+        {
+            "key": "field_624cbd847cafe",
+            "label": "BG",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_624cbb9d7c684",
+            "label": "BG Color",
+            "name": "bg_color",
+            "type": "editor_palette",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "white",
+            "exclude_colors": "",
+            "return_format": "slug"
+        },
+        {
+            "key": "field_624cbb827c683",
+            "label": "BG Image",
+            "name": "bg_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_624cbbaf7c685",
+            "label": "BG Blend Mode",
+            "name": "bg_blend_mode",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_624cbb827c683",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-blend-normal": "normal",
+                "bg-blend-multiply": "multiply",
+                "bg-blend-screen": "screen",
+                "bg-blend-overlay": "overlay",
+                "bg-blend-darken": "darken",
+                "bg-blend-lighten": "lighten",
+                "bg-blend-color-dodge": "color-dodge",
+                "bg-blend-color-burn": "color-burn",
+                "bg-blend-hard-light": "hard-light",
+                "bg-blend-soft-light": "soft-light",
+                "bg-blend-difference": "difference",
+                "bg-blend-exclusion": "exclusion",
+                "bg-blend-hue": "hue",
+                "bg-blend-saturation": "saturation",
+                "bg-blend-color": "color",
+                "bg-blend-luminosity": "luminosity"
+            },
+            "default_value": "bg-blend-normal",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_62882291239d8",
+            "label": "BG Image Custom Class",
+            "name": "bg_image_custom_class",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_624cbb827c683",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "bg-cover bg-center bg-no-repeat",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624cbdae7caff",
+            "label": "BG End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1657560660
+}

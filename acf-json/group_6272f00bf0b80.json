@@ -1,0 +1,51 @@
+{
+    "key": "group_6272f00bf0b80",
+    "title": "Options - Block Areas",
+    "fields": [
+        {
+            "key": "field_6272f014c5833",
+            "label": "Render Options",
+            "name": "render_options",
+            "type": "true_false",
+            "instructions": "Will render as a submenu. Requires a menu item with \"Has Dropdown\" and \"Select Block Area\" selected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Render as Submenu",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "block_area"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "create_gutenberg_block": 0,
+    "block_name": "",
+    "block_slug": "",
+    "block_category": "text",
+    "block_align": "full",
+    "block_container_class": "block-inner",
+    "inner_blocks": 0,
+    "modified": 1652143697
+}
