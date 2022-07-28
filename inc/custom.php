@@ -155,3 +155,61 @@ function convertHexToCurrentColor($name)
 // remove bs svg bloat on frontend
 remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
 remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+
+
+// Register Custom Post Type
+function shows() {
+
+	$labels = array(
+		'name'                  => _x( 'Shows', 'Post Type General Name', '_s' ),
+		'singular_name'         => _x( 'Show', 'Post Type Singular Name', '_s' ),
+		'menu_name'             => __( 'Shows', '_s' ),
+		'name_admin_bar'        => __( 'Shows', '_s' ),
+		'archives'              => __( 'Show Archives', '_s' ),
+		'attributes'            => __( 'Show Attributes', '_s' ),
+		'parent_item_colon'     => __( 'Parent Item:', '_s' ),
+		'all_items'             => __( 'All Shows', '_s' ),
+		'add_new_item'          => __( 'Add New Show', '_s' ),
+		'add_new'               => __( 'Add New', '_s' ),
+		'new_item'              => __( 'New Show', '_s' ),
+		'edit_item'             => __( 'Edit Show', '_s' ),
+		'update_item'           => __( 'Update Item', '_s' ),
+		'view_item'             => __( 'View Item', '_s' ),
+		'view_items'            => __( 'View Items', '_s' ),
+		'search_items'          => __( 'Search Item', '_s' ),
+		'not_found'             => __( 'Not found', '_s' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', '_s' ),
+		'featured_image'        => __( 'Featured Image', '_s' ),
+		'set_featured_image'    => __( 'Set featured image', '_s' ),
+		'remove_featured_image' => __( 'Remove featured image', '_s' ),
+		'use_featured_image'    => __( 'Use as featured image', '_s' ),
+		'insert_into_item'      => __( 'Insert into item', '_s' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this show', '_s' ),
+		'items_list'            => __( 'Show list', '_s' ),
+		'items_list_navigation' => __( 'Items list navigation', '_s' ),
+		'filter_items_list'     => __( 'Filter items list', '_s' ),
+	);
+	$args = array(
+		'label'                 => __( 'Show', '_s' ),
+		'description'           => __( 'Upcoming Shows', '_s' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'shows', $args );
+
+}
+add_action( 'init', 'shows', 0 );

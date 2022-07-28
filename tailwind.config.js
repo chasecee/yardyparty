@@ -18,14 +18,15 @@ module.exports = {
 			variants: [ 'md' ],
 		},
 		{
-			pattern: /^(w|h|list|bg|text|flex|transform|translate|-translate)-/,
+			pattern:
+				/^(w|h|list|bg|text|flex|transform|translate|-translate|font)-/,
 		},
 		{
 			pattern: /^gap-[0-9]/,
 			variants: [ 'md' ],
 		},
 		{
-			pattern: /^(order-|grid-)/,
+			pattern: /^(order-|grid-|leading-)/,
 			variants: [ 'md' ],
 		},
 	],
@@ -58,6 +59,8 @@ module.exports = {
 			24: '1.5rem',
 			32: '2rem',
 			48: '3rem',
+			64: '4rem',
+			90: '5.625rem',
 		},
 		spacing: {
 			px: '1px',
@@ -147,7 +150,10 @@ module.exports = {
 				100: '1.00',
 			},
 		},
-		fontFamily: { sans: [ 'DM Sans', 'sans-serif' ] },
+		fontFamily: {
+			sans: [ 'Poppins', 'sans-serif' ],
+			serif: [ 'Shrikhand', 'serif' ],
+		},
 	},
 	variants: {},
 	plugins: [

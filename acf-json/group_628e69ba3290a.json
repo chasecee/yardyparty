@@ -1,6 +1,6 @@
 {
     "key": "group_628e69ba3290a",
-    "title": "Block - Post Grid Menu",
+    "title": "Block - Post Grid",
     "fields": [
         {
             "key": "field_628e69ba39025",
@@ -46,9 +46,8 @@
                 "id": ""
             },
             "choices": {
-                "post": "Blog",
-                "resource": "Resource",
-                "news": "News"
+                "shows": "Shows",
+                "post": "Posts"
             },
             "allow_null": 0,
             "default_value": "",
@@ -219,7 +218,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/post-grid-menu"
+                "value": "acf\/post-grid"
             }
         ]
     ],
@@ -232,12 +231,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "create_gutenberg_block": 0,
-    "block_name": "",
-    "block_slug": "",
-    "block_category": "text",
-    "block_align": "full",
-    "block_container_class": "block-inner",
-    "inner_blocks": 0,
-    "modified": 1653502084
+    "modified": 1658955565
 }

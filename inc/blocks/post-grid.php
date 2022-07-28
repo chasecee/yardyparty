@@ -20,21 +20,25 @@ $gap_class = get_field('gap_class');
 $limit_posts = get_field('limit_posts');
 
 ?>
-
-<div class="block-inner">
+<script async src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<div class="block-inner showslist">
     <div class="relative">
         <div class="relative ">
             <div class="flex flex-col gap-24">
             <?php
-            $args_post_grid_query = array(
-                'post_type' => array($post_grid_post_type),
-                'post_status' => array('publish'),
-                'posts_per_page' => $limit_posts,
-                'ignore_sticky_posts' => true,
-                'order' => 'DESC',
-                'orderby' => 'date',
-            );
+			$time = current_time( 'timestamp' ); // Get current unix timestamp
 
+			// Set up custom query with meta_query to compare event start date with today's date
+			$args_post_grid_query = array (
+			'post_type'              => 'shows', // your event post type slug
+			'post_status'            => 'publish', // only show published events
+			'orderby'                => 'meta_value', // order by date
+			'meta_key'               => 'date', // your ACF Date & Time Picker field
+			'meta_value'             => $time, // Use the current time from above
+			'meta_compare'           => '>=', // Compare today's datetime with our event datetime
+			'order'                  => 'ASC', // Show earlier events first
+			'posts_per_page'         => $limit_posts,
+			);
             if ($post_grid_option == 'custom' ){
                 $post_grid_posts = get_field('post_grid_posts');
 
@@ -54,7 +58,7 @@ $limit_posts = get_field('limit_posts');
 
                     get_template_part(
                         'template-parts/content',
-                        'post-summary-menu',
+                        'shows',
                         array(
                             'accent-color'  => $post_grid_baccent_color,
                             'post-type' => $post_grid_post_type,

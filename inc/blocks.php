@@ -85,9 +85,9 @@ function be_register_blocks() {
 		]
 	));
 	acf_register_block_type( array(
-		'name'			=> 'post-grid-menu',
-		'title'			=> __( 'Post Grid Menu', '_s' ),
-		'render_template'	=> 'inc/blocks/post-grid-menu.php',
+		'name'			=> 'post-grid',
+		'title'			=> __( 'Post Grid', '_s' ),
+		'render_template'	=> 'inc/blocks/post-grid.php',
 		'category'		=> 'formatting',
 		'icon'			=> 'superhero-alt',
 		'mode'			=> 'preview',
